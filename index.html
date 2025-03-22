@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>VP Transposer</title>
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <h1>VP Transposer</h1>
+
+        <!-- TEXT INPUT -->
+        <div id="entry">
+            <textarea id="input" placeholder="Input..." spellcheck="false"></textarea>
+
+            <textarea id="output" placeholder="Output..." readonly spellcheck="false"></textarea>
+        </div>
+
+        <!-- CONTROLS -->
+        <div id="controls">
+            <h2>Controls</h2>
+            <input type="number" id="transp-number" value=0>
+            <button id="transpose">transpose</button>
+
+            <br /><br />
+
+            <button id="autotranspose">find best transposition(s)</button>
+            <div id="autotrans-result-div">
+                <p id="autotrans-result"></p>
+                <p id="autotrans-count"></p>
+            </div>
+
+            <br /><br />
+
+            <button id="transfer">transfer output to input field</button>
+
+            <br /><br /><br />
+
+            <!-- CONFIG -->
+            <h2>Config</h2>
+            <p style="display:inline;">How to handle out-of-bounds notes:</p>
+            <select id="oobSelect">
+                <option value="question">Mark them as "?"</option>
+                <option value="transpose">Transpose them to the nearest octave</option>
+                <!-- <option value="octswitch">Use octave-switching notation</option> -->
+                <option value="delete">Do not include them</option>
+            </select>
+
+            <br /><br /><br />
+
+            <!-- OCTAVE COMPRESSION -->
+            <h2>Octave Compression</h2>
+            <p>Compresses <b>input</b> sheet into three octaves (here for FFXIV bards)</p>
+            <button id="compress1s">1-s (0 bad notes)</button>
+            <button id="compress8l">8-l (0 bad notes)</button>
+            <button id="compresstm">t-m (0 bad notes)</button>
+            <p>(There will eventually be an option to notate the use of octave-switching keys, mitigating the drawbacks
+                of compression.)</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
