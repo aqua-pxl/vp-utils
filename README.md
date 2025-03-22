@@ -1,5 +1,5 @@
 # About
-This is a tool that perform various tasks on Virtual Piano sheets.
+This is a tool that can perform various tasks on Virtual Piano sheets.
 
 You can:
 - Transpose sheets by a set number
