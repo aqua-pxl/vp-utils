@@ -73,9 +73,6 @@ function transposeString(str, noteAmount, minKey = 0, maxKey = VP_CHARS.length -
                         break;
                     case "delete":
                         break;
-                    case "octswitch":
-                        // Currently not implemented
-                        break;
                 }
             }
         }
